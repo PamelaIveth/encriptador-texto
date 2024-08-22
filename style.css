@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #F3F5FC;
+    --color-secundario: #0A3871;
+    --color-terciario : #495057;
+
+    --fuente-inter : "Inter", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0; 
+}
+body{
+    padding: 40px;
+    background-color: var(--color-primario);
+}
+.container{
+    display: flex; 
+    justify-content: space-between;
+    gap: 80px;
+}
+.logo-principal{
+    padding-left: 44px;
+}
+.container-msj-inicial{
+    padding-top: 128px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+.container-msj-inicial-texto{
+    color: var(--color-secundario);
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    outline: none;
+    border:none;
+    background-color: var(--color-primario);
+    resize: none;
+    width: 577px;
+    height: 672px;
+}
+#textoUsuario::placeholder{
+    color: var(--color-secundario);
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+}
+.logo-advertencia{
+    float: left;
+    padding-right: 8px;
+}
+.msj-advertencia{
+    color: var(--color-terciario);
+    font-size: 0.75rem;
+    font-family: var(--fuente-inter);
+}
+.msj-advertencia2{
+    color: var(--color-terciario);
+    font-size: 0.85rem;
+    font-family: var(--fuente-inter);
+    font-weight: bold;
+}
+
+.container-botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    
+}
+.container-boton-encriptar{
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    color: #FFFFFF;
+    border-radius: 24px;
+    background-color: var(--color-secundario);
+    padding: 24px;
+    width: 100%;
+    border: 0px solid #000000;
+    cursor: pointer;
+}
+.container-boton-desencriptar{
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    background-color: #D8DFE8;
+    border-radius: 24px;
+    color: var(--color-secundario);
+    padding: 24px;
+    width: 100%;
+    border: 1px solid var(--color-secundario);
+    cursor: pointer;
+}
+.container-msj-final{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    border-radius: 32px;
+    box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+    
+}
+.container-msj-final-img{
+    padding: 0px 32px;
+}
+.container-msj-final-aviso{
+    padding: 0px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.container-msj-final-h2{
+    color: #343A40;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.container-msj-final-p{
+    color: #495057;
+    font-size: 1rem;
+    font-family: var(--fuente-inter);
+    text-align: center;
+    
+}
+.container-msj-final-resultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+}
+.textarea-resultado{
+    color: #495057;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    outline: none;
+    border:none;
+    resize: none;
+    width: 336px;
+    height: 781px;
+}
+.boton-copiar{
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    border-radius: 24px;
+    color: var(--color-secundario);
+    padding: 24px;
+    width: 100%;
+    border: 1px solid var(--color-secundario);
+    cursor: pointer;
+    margin-top: 32px;
+}
+
+
+@media (max-width:768px){
+
+    .container{
+        flex-direction: column;
+        gap: 64px;
+    }
+    .logo-principal{
+        padding-top: 34px;
+        padding-left: 0px;
+    }
+    .container-msj-inicial{
+        padding: 0px;
+    }
+    .container-msj-inicial-texto{
+        height: 576px;
+        width: 100%;
+    }
+    .container-msj-final-img{
+        display: none;
+    }
+    .container-msj-final-aviso{
+        padding: 32px;
+    }
+    .textarea-resultado{
+        height: 180px;
+        width: 100%;
+    }
+}
+
+@media (max-width:375px){
+    .body{
+        padding: 16px;
+    }
+    .logo-principal{
+        padding-top: 8px;
+    }
+    .container-msj-inicial{
+        padding: 0px;
+    }
+    .container-msj-inicial-texto{
+        height: 288px;
+    }
+    .container-botones{
+        flex-direction: column;
+    }
+    .textarea-resultado{
+        height: 432px;
+        width: 100%;
+    }
+
+}
